@@ -71,7 +71,7 @@
       }
 
       // format the code
-      if (source.match(".html*" + "$")) {
+      if (source.match(".html*|.dust" + "$")) {
         log(style_html(data, option));
       }
       else if (source.match(".css*|.less|.sass" + "$")) {
