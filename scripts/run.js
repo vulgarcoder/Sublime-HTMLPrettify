@@ -71,10 +71,10 @@
       }
 
       // format the code
-      if (source.match(".html?" + "$")) {
+      if (source.match(".html*" + "$")) {
         log(style_html(data, option));
       }
-      else if (source.match(".css" + "$") == ".css") {
+      else if (source.match(".css*|.less|.sass" + "$")) {
         log(cssbeautify(data, option));
       }
       else if (source.match(".js" + "$") == ".js") {
