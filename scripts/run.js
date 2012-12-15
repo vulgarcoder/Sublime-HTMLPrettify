@@ -47,8 +47,8 @@
   global.js_beautify =
     require(path.join(__dirname, "beautify.js")).js_beautify;
 
-  global.cssbeautify =
-    require(path.join(__dirname, "cssbeautify.js")).cssbeautify;
+  global.css_beautify =
+    require(path.join(__dirname, "beautify-css.js")).css_beautify;
 
   // continue only if the source file is specified
   if (source !== "") {
@@ -75,7 +75,7 @@
         log(style_html(data, option));
       }
       else if (source.match(".css*|.less|.sass" + "$")) {
-        log(cssbeautify(data, option));
+        log(css_beautify(data, option));
       }
       else if (source.match(".js" + "$") == ".js") {
         log(js_beautify(data, option));
